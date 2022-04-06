@@ -10,7 +10,7 @@ export const Navbar = () => {
         </div>
         <div className="n-right">
             <div className="n-list">
-                <ul>
+                <ul style={{listStyleType: 'none'}}>
                     <li>Home</li>
                     <li>Service</li>
                     <li>Experience</li>
@@ -18,8 +18,8 @@ export const Navbar = () => {
                     <li>Testimonial</li>
                 </ul>
             </div>
-            <button className="button">
-                Contact Us
+            <button className="button n-button">
+                Contact
             </button>
         </div>
     </div>
