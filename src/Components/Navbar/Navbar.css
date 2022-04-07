@@ -29,10 +29,11 @@
    flex: 10; 
 }
 
-.n-list>ul{
+.n-list > ul{
     display: flex;
     gap: 2rem;
     margin-right: 4rem;
+    cursor: pointer;
 }
 
 .n-list > ul > li:hover{
@@ -42,5 +43,14 @@
 
 .n-button{
     flex: 2;
-    
+}
+
+/* Responsive */
+@media screen and (max-width: 480px){
+    .n-list{
+        display: none;
+    }
+    .n-button{
+        display: none;
+    }
 }

@@ -88,6 +88,25 @@
     top: 8rem;
 }
 
-/* menit 1:27:25 */
+@media screen and (max-width: 480px) {
+    .works{
+        flex-direction: column;
+        height: 55rem;
+        padding: 0;
+        gap: 5rem;
+    }
+    .w-right{
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        transform: slace(0.7);
+    }
+    .w-mainCircle{
+        position: static;
+    }
+    .w-backCircle{
+        left: 8rem !important;
+    }
+}
 
 

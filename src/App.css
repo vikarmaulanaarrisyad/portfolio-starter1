@@ -34,3 +34,10 @@
   border: 1px solid var(--orange);
 }
 
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .App{
+    padding: 0.5rem 1rem;
+  }
+}
+

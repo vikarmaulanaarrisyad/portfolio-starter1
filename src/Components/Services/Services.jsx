@@ -7,13 +7,15 @@ import Card from '../Card/Card'
 import Resume from './resume.pdf'
 import {themeContext} from '../../Context';
 import { useContext } from "react";
+import {motion} from 'framer-motion'
 
 const Services = () => {
 
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const transition = {duration : 1, type : 'spring'}
   return (
-    <div className='services'>
+    <div className='services' id='Services'>
 
         {/* left side */}
         <div className="awesome">
@@ -31,13 +33,18 @@ const Services = () => {
         </div>
         {/* right side */}
         <div className="cards"> 
-          <div style={{ left: '14rem' }}>
+          <motion.div 
+          whileInView={{ left: '14rem' }}
+          initial={{ left: '25rem' }}
+          transition={transition}  
+
+          style={{ left: '14rem' }}>
             <Card
               emoji = {HeartEmoji}
               heading = {'Design'}
               detail= {"Figma, Photoshop and CorelDraw"}
             />
-          </div>
+          </motion.div>
 
           {/* second card */}
           <div style={{ top: '12rem', left: '-4rem' }}> 
@@ -49,7 +56,12 @@ const Services = () => {
           </div>
 
           {/* 3rd */}
-          <div style={{ top: '19rem', left: '12rem' }}>
+          <motion.div 
+          whileInView={{ left: '14rem' }}
+          initial={{ left: '12rem' }}
+          transition={transition}  
+
+          style={{ top: '19rem', left: '12rem' }}>
             <Card
               emoji={Humble}
               heading={'UI/UX'}
@@ -57,7 +69,7 @@ const Services = () => {
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
               }
             />
-          </div>
+          </motion.div>
         </div>
     </div>
   )
